@@ -1,0 +1,33 @@
+---
+ip: 192.168.33.99
+docroot: /var/www/vhosts/nippon/web
+servername: nippon.vb
+
+server:
+    install: '1'
+    timezone: UTC
+    locale: ca_ES.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: nippon, ip: ip, memory: '1024', sharedfolder: ./code, useVagrantCloud: '1', syncType: nfs }
+apache:
+    install: '1'
+    docroot: docroot
+    servername: servername
+mysql:
+    install: '1'
+    root_password: '123'
+    database: db
+    user: user
+    password: password
+    dump: ''
+redis:
+    install: '1'
+    port: '6379'
+php:
+    install: '1'
+    ppa: php5-5.6
+    packages: [php5-cli, php5-intl, php5-mcrypt, php5-mysql]
+composer:
+    install: '1'
+

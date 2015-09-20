@@ -5,11 +5,11 @@ server:
     locale: ca_ES.UTF-8
 vagrant_local:
     install: '1'
-    vm: { base_box: trusty64, hostname: nippon, ip: 192.168.33.99, memory: '1024', sharedfolder: ./code, useVagrantCloud: '1', syncType: nfs }
+    vm: { base_box: trusty64, hostname: nippon.local, ip: 192.168.33.99, memory: '1024', sharedfolder: ./code, useVagrantCloud: '1', syncType: nfs }
 apache:
     install: '1'
     docroot: /var/www/vhosts/nippon/web
-    servername: nippon.vb
+    servername: nippon.local
 mysql:
     install: '1'
     root_password: '123'
